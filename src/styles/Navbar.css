@@ -1,57 +1,49 @@
 .navbar {
-  width: 100%;
-  height: 100px;
-  background: #21325e;
+  width: auto; /* This will make the navbar width fit to the content */
+  padding: 0 20px; /* Added padding */
+  height: 100vh;
+  background: #1a1a1d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-15%);
+  transition: transform 0.3s ease-in-out;
 }
 
 .links {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #C5B783;
 }
 
 .navbar a {
-  color: white;
+  color: #C5B783;
   text-decoration: none;
   margin: 20px;
   font-size: 25px;
+  text-align: center;
 }
 
 .toggleButton {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #e9d35b;
+  cursor: pointer;
 }
 
 .toggleButton svg {
   font-size: 50px;
 }
-.toggleButton button {
-  margin-right: 20px;
-  background-color: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
 
 #open {
-  height: 100vh;
-}
-
-#open .links {
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 100px;
-}
-
-#open a {
-  width: 100%;
-  text-align: center;
+  transform: translateX(0);
 }
 
 @media only screen and (max-width: 900px) {
@@ -79,10 +71,10 @@
   }
 
   #open {
-    height: 100px;
+    height: 100vh;
   }
 
   #open .links {
-    flex-direction: row;
+    flex-direction: column;
   }
 }

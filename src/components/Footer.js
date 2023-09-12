@@ -1,22 +1,25 @@
 import React from "react";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import FacebookIcon from "@material-ui/icons/Facebook";
+import EmailIcon from "@material-ui/icons/Email";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GithubIcon from "@material-ui/icons/GitHub";
 import "../styles/Footer.css";
 
 function Footer() {
-  return (
-    <div className="footer">
-      <div className="socialMedia">
-        <InstagramIcon />
-        <TwitterIcon />
-        <FacebookIcon />
-        <LinkedInIcon />
-      </div>
-      <p> &copy; 2022 pedrotech.com</p>
-    </div>
-  );
+    return (
+        <div className="footer">
+            <div className="socialMedia">
+                <a href="https://www.linkedin.com/in/mauric10" target="_blank" rel="noopener noreferrer">
+                    <LinkedInIcon />
+                </a>
+                <a href="mailto:mauricio.gon234@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <EmailIcon />
+                </a>
+                <a href="https://github.com/mauriciog88u1" target="_blank" rel="noopener noreferrer">
+                    <GithubIcon />
+                </a>
+            </div>
+        </div>
+    );
 }
 
 export default Footer;

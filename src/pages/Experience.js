@@ -4,74 +4,61 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import SchoolIcon from "@material-ui/icons/School";
 import WorkIcon from "@material-ui/icons/Work";
+import SchoolIcon from "@material-ui/icons/School";
 
 function Experience() {
   return (
-    <div className="experience">
-      <VerticalTimeline lineColor="#3e497a">
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2010 - 2014"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            My Random High School, Random Place, Random State
-          </h3>
-          <p> High School Diploma</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2014 - 2018"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            My Cool University, Vancouver, British Columbia
-          </h3>
+      <div className="experience">
+        <VerticalTimeline lineColor="#3e497a">
+          <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              date="Expected May 2024"
+              iconStyle={{ background: "#3e497a", color: "#fff" }}
+              icon={<SchoolIcon />}
+          >
+            <h3 className="vertical-timeline-element-title">
+              Bachelor of Science in Computer Science
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Colorado State University, Fort Collins, Colorado
+            </h4>
+          </VerticalTimelineElement>
 
-          <h4 className="vertical-timeline-element-subtitle">
-            Bachelor's Degree
-          </h4>
+          <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="May 2023 - Aug 2023"
+              iconStyle={{ background: "#e9d35b", color: "#fff" }}
+              icon={<WorkIcon />}
+          >
+            <h3 className="vertical-timeline-element-title">Network Engineer Intern, Cisco Meraki</h3>
+            <h4 className="vertical-timeline-element-subtitle">Chicago, Illinois</h4>
+            <p>Developed networking skills, aided in product development and enhancement, automated solutions, and strengthened network security.</p>
+          </VerticalTimelineElement>
 
-          <p> Computer Science</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2018 - 2020"
-          iconStyle={{ background: "#e9d35b", color: "#fff" }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Back End Engineer - Google
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            San Francisco, CA
-          </h4>
-          <p>Developed the backend infrastructure for 3 projects.</p>
-        </VerticalTimelineElement>
+          <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="Jan 2023 - Current"
+              iconStyle={{ background: "#e9d35b", color: "#fff" }}
+              icon={<WorkIcon />}
+          >
+            <h3 className="vertical-timeline-element-title">IT Lab Technician, Colorado State University</h3>
+            <h4 className="vertical-timeline-element-subtitle">Fort Collins, Colorado</h4>
+            <p>Maintained network infrastructure, automated tasks with shell scripting, and contributed to cybersecurity initiatives.</p>
+          </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2020 - present"
-          iconStyle={{ background: "#e9d35b", color: "#fff" }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Full Stack Engineer - Twitch
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            San Francisco, CA
-          </h4>
-          <p>
-            Helped the team launch 2 major features by working both in the front
-            end and back end.
-          </p>
-        </VerticalTimelineElement>
-      </VerticalTimeline>
-    </div>
+          <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="May 2019 - Aug 2022"
+              iconStyle={{ background: "#e9d35b", color: "#fff" }}
+              icon={<WorkIcon />}
+          >
+            <h3 className="vertical-timeline-element-title">Youth Supervisor, Groundwork Denver</h3>
+            <h4 className="vertical-timeline-element-subtitle">Denver, Colorado</h4>
+            <p>Automated processes, led community projects, fostered team growth, and managed a team of 6 youth.</p>
+          </VerticalTimelineElement>
+        </VerticalTimeline>
+      </div>
   );
 }
 
