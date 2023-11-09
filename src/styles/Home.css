@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   text-align: left; /* Align text to the left */
-  background-color: #020203;
+  background-color: #1E4D2B;
 }
 
 .about h2 {
@@ -42,7 +42,8 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: #333333;
+  /*boulder black for background*/
+    background-color: #020203;
 }
 
 .skills .list {
@@ -52,7 +53,7 @@
 
 .list span {
   font-size: 20px;
-  color: #ffffff; /* White color for text under headers */
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 600px) {
