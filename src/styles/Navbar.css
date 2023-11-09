@@ -1,5 +1,5 @@
 .navbar {
-  width: auto; /* This will make the navbar width fit to the content */
+    width: auto%;
   padding: 0 20px; /* Added padding */
   height: 100vh;
   background: #1a1a1d;
@@ -68,6 +68,9 @@
 
   .hiddenLinks {
     display: none;
+  }
+
+  #open {
   }
 
   #open {

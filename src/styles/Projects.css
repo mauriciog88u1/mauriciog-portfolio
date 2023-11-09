@@ -1,4 +1,6 @@
 .projects {
+  /*make text color white*/
+    color: #ffffff;
   width: 100%;
   height: auto;
   display: flex;
@@ -8,7 +10,7 @@
 }
 .projects .projectTitle {
   text-align: center;
-  color: #3e497a;
+  color: #ffffff;
   font-size: 60px;
   font-weight: bolder;
 }
@@ -28,11 +30,11 @@
   width: 300px;
   height: 300px;
   margin: 40px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.2);
   text-align: center;
 }
 .projectItem:hover {
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.5);
   transition: 0.3s ease-in;
   cursor: pointer;
 }
@@ -71,4 +73,14 @@
     width: 300px;
     height: 300px;
   }
+}
+.skills-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-line {
+  font-size: small;
+  color: white;
+  margin-bottom: 10px; /* Space between lines */
 }
