@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px; /* Add padding for better spacing */
+  padding: 30px; /* Add padding for better spacing */
   box-sizing: border-box; /* Include padding in the width and height calculations */
 }
 
@@ -16,7 +16,7 @@
 }
 
 .project img {
-  max-width: 100%; /* Ensure the image is responsive and does not exceed its container */
+  max-width: 60%; /* Ensure the image is responsive and does not exceed its container */
   height: auto; /* Maintain aspect ratio */
   border-radius: 10px;
 }

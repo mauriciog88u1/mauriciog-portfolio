@@ -2,6 +2,7 @@ import React from 'react';
 import {classList} from "../helpers/ClassList";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../src/styles/Education.css';
+import Accordion from 'react-bootstrap/Accordion';
 function EducationPage() {
     // Custom sort function to sort by year and semester
     const sortedClasses = classList.sort((a, b) => {
@@ -27,16 +28,20 @@ function EducationPage() {
 
     return (
         <div className="container text-white">
-            {sortedClasses.map((classItem, index) => (
-                <div key={index} className="row mb-3 pb-2 border-bottom border-white">
-                    <div className="col-12 text-center">
-                        <h3>{classItem.courseName} ({classItem.courseCode})</h3>
-                        <p>Semester: {classItem.semester}</p>
-                        <p>Skills Used: {classItem.technologiesLearned}</p>
-                        <p>Description: {classItem.description}</p>
-                    </div>
-                </div>
-            ))}
+            <h1>Education</h1>
+            <p>Here are some of the classes I have taken at Colorado State University. Sorted by most recently taken.</p>
+            <Accordion defaultActiveKey="0">
+                {sortedClasses.map((classItem, index) => (
+                    <Accordion.Item eventKey={String(index)} key={index}>
+                        <Accordion.Header>{classItem.courseName} ({classItem.courseCode})</Accordion.Header>
+                        <Accordion.Body>
+                            <p>Semester: {classItem.semester}</p>
+                            <p>Skills Used: {classItem.technologiesLearned}</p>
+                            <p>Description: {classItem.description}</p>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                ))}
+            </Accordion>
         </div>
     );
 }

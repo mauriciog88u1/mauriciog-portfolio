@@ -1,33 +1,30 @@
 .projects {
-  color: #ffffff; /* This ensures all text within .projects is white */
+  color: #ffffff; /* White text within .projects */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 20px; /* Add some space at the top if needed */
+  padding-top: 40px; /* Top space */
 }
-
 
 .projects .projectTitle {
   text-align: center;
   color: #ffffff;
-  font-size: 60px;
+  font-size: 4.5vw; /* Scalable font size */
   font-weight: bolder;
-  margin-bottom: 20px; /* Add some space below the title */
+  margin-bottom: 20px; /* Space below title */
 }
 
 .projectList {
-  width: 70vw; /* Adjust the width as necessary */
+  width: 70vw; /* Width adjustment */
   height: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Simplified grid-template-columns */
-  gap: 40px; /* This adds space between grid items */
+  grid-template-columns: repeat(3, 1fr); /* 3-column grid */
+  gap: 40px; /* Space between grid items */
   justify-content: center;
-  align-items: start; /* Align items to the start to prevent stretching */
-  padding: 20px; /* Add padding inside the grid */
+  align-items: start;
+  padding: 0px; /* Inside grid padding */
 }
-
-/* MENU ITEM STYLING */
 
 .projectItem {
   border-radius: 15px;
@@ -35,7 +32,7 @@
   height: 300px;
   box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.2);
   text-align: center;
-  transition: box-shadow 0.3s ease-in; /* Move transition to main class for smoother effect */
+  transition: box-shadow 0.3s ease-in;
 }
 
 .projectItem:hover {
@@ -57,27 +54,45 @@
   font-size: 25px;
 }
 
-/* Responsive Design Adjustments */
-@media only screen and (max-width: 1300px) {
+/* Responsive Adjustments for Larger Screens (e.g., Mac, Windows) */
+@media only screen and (min-width: 1501px) {
+  .projectList {
+    padding: 75px; /* Increased padding for larger screens */
+  }
+}
+/* Responsive Adjustments for Medium Screens */
+@media only screen and (max-width: 1500px) {
   .projectList {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px; /* Medium padding for medium screens */
+  }
+
+  .projectTitle {
+    font-size: 3rem; /* Adjusted font size for medium screens */
   }
 }
 
+/* Responsive Adjustments for Smaller Screens (e.g., Mobile) */
 @media only screen and (max-width: 800px) {
   .projectList {
     grid-template-columns: 1fr;
-    width: 90vw; /* Adjust the width for smaller screens */
+    width: 90vw;
+    padding: 10px; /* Reduced padding for smaller screens */
   }
+
   .projectItem {
-    width: auto; /* Make the items responsive to the container's width */
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .projectTitle {
+    font-size: 2.5rem; /* Adjusted font size for small screens */
   }
 }
 
-
-
 .skill-line {
-  font-size: small;
+  font-size: 1.2rem; /* Scalable font size */
   color: white;
   margin-bottom: 10px; /* Space between lines */
 }

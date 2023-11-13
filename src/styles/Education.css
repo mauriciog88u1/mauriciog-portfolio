@@ -1,29 +1,28 @@
 .container {
-    color: #ff0000;
-    margin: 1rem; /* Adjust the margin as needed */
-    font-family: "Times New Roman", Times, serif; /* Times New Roman font */
+    color: #ffffff; /* White text */
+    margin: 1rem;
+    padding-top: 4rem; /* Adjust space below the nav bar */
+    font-family: "Arial", sans-serif; /* Arial font */
+    background-color: #000000; /* Black background */
 }
 
-.row {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #ff0000;
+.accordion-header, .accordion-button {
+    background-color: #333333; /* Dark gray background for headers */
+    color: #ffffff; /* White text for headers */
+    border-bottom: 1px solid #474747; /* Dark gray border */
 }
 
-.col-12 {
-    text-align: center;
-    margin: 1rem; /* Adjust the margin as needed */
-    font-family: "Times New Roman", Times, serif; /* Times New Roman font */
+.accordion-button:not(.collapsed) {
+    color: #1abc9c; /* Teal text for active headers */
 }
 
-.col-12 h3, .col-12 p {
-    word-wrap: break-word;
-    margin: 0.5rem 0; /* Adjust the margin as needed */
-    font-family: "Times New Roman", Times, serif; /* Times New Roman font */
+.accordion-item {
+    border-color: #474747; /* Dark gray borders */
 }
 
-@media (max-width: 768px) {
-    .col-12 p {
-        word-break: break-all;
-    }
+.accordion-body {
+    background-color: #000000; /* Black background for body */
+    color: #d3d3d3; /* Light gray text for body */
 }
+
+/* Rest of the CSS... */
