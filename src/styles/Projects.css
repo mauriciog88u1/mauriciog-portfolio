@@ -1,26 +1,30 @@
 .projects {
-  /*make text color white*/
-    color: #ffffff;
-  width: 100%;
-  height: auto;
+  color: #ffffff; /* This ensures all text within .projects is white */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 20px; /* Add some space at the top if needed */
 }
+
+
 .projects .projectTitle {
   text-align: center;
   color: #ffffff;
   font-size: 60px;
   font-weight: bolder;
+  margin-bottom: 20px; /* Add some space below the title */
 }
 
 .projectList {
-  width: 70vw;
+  width: 70vw; /* Adjust the width as necessary */
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
+  grid-template-columns: repeat(3, 1fr); /* Simplified grid-template-columns */
+  gap: 40px; /* This adds space between grid items */
+  justify-content: center;
+  align-items: start; /* Align items to the start to prevent stretching */
+  padding: 20px; /* Add padding inside the grid */
 }
 
 /* MENU ITEM STYLING */
@@ -29,13 +33,13 @@
   border-radius: 15px;
   width: 300px;
   height: 300px;
-  margin: 40px;
   box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.2);
   text-align: center;
+  transition: box-shadow 0.3s ease-in; /* Move transition to main class for smoother effect */
 }
+
 .projectItem:hover {
   box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.5);
-  transition: 0.3s ease-in;
   cursor: pointer;
 }
 
@@ -53,31 +57,24 @@
   font-size: 25px;
 }
 
+/* Responsive Design Adjustments */
 @media only screen and (max-width: 1300px) {
   .projectList {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (max-width: 800px) {
   .projectList {
     grid-template-columns: 1fr;
+    width: 90vw; /* Adjust the width for smaller screens */
+  }
+  .projectItem {
+    width: auto; /* Make the items responsive to the container's width */
   }
 }
 
-@media only screen and (max-width: 800px) {
-  .projectList {
-    width: 100%;
-  }
-  .projectItem {
-    width: 300px;
-    height: 300px;
-  }
-}
-.skills-list {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .skill-line {
   font-size: small;

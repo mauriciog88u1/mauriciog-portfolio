@@ -1,0 +1,29 @@
+.container {
+    color: #ff0000;
+    margin: 1rem; /* Adjust the margin as needed */
+    font-family: "Times New Roman", Times, serif; /* Times New Roman font */
+}
+
+.row {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ff0000;
+}
+
+.col-12 {
+    text-align: center;
+    margin: 1rem; /* Adjust the margin as needed */
+    font-family: "Times New Roman", Times, serif; /* Times New Roman font */
+}
+
+.col-12 h3, .col-12 p {
+    word-wrap: break-word;
+    margin: 0.5rem 0; /* Adjust the margin as needed */
+    font-family: "Times New Roman", Times, serif; /* Times New Roman font */
+}
+
+@media (max-width: 768px) {
+    .col-12 p {
+        word-break: break-all;
+    }
+}

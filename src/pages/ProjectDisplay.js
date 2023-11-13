@@ -8,10 +8,9 @@ function ProjectDisplay() {
     const { id } = useParams();
     const project = ProjectList[id];
 
-    // Function to render skills with a maximum of five per line
     const renderSkills = (skills) => {
         return skills.split(', ').reduce((acc, skill, index) => {
-            const line = Math.floor(index / 5);
+            const line = Math.floor(index / 12);
             if (!acc[line]) {
                 acc[line] = [];
             }

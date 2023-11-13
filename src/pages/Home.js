@@ -15,6 +15,7 @@ function Home() {
                     <h2>{titleText.trim()}</h2>
                 </div>
                 <div className="prompt">
+                    <br/>
                     <p>I am a Computer Science major at Colorado State University</p>
                     <a href="https://www.linkedin.com/in/mauric10" target="_blank" rel="noopener noreferrer">
                         <LinkedInIcon />

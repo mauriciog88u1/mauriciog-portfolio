@@ -34,6 +34,7 @@ function Experience() {
             <h3 className="vertical-timeline-element-title">Network Engineer Intern, Cisco Meraki</h3>
             <h4 className="vertical-timeline-element-subtitle">Chicago, Illinois</h4>
             <p>Developed networking skills, aided in product development and enhancement, automated solutions, and strengthened network security.</p>
+            <p>Worked with various Cisco Meraki products and troubleshooted various networking related issues</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
