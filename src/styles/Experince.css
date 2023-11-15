@@ -1,0 +1,35 @@
+.experience {
+    width: 100%;
+    margin: 2rem auto; /* Add margin to push the timeline down */
+}
+
+
+.experience .vertical-timeline {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.experience .education-icon,
+.experience .work-icon {
+    background: #3e497a;
+    color: #fff;
+}
+
+.experience .work-icon {
+    background: #e9d35b; /* Separate styling for work icons */
+}
+
+/* Additional styles for the timeline elements */
+
+
+.vertical-timeline-element--date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff; /* Change text color to white */
+}
+#root > div > div.experience > div > div.vertical-timeline-element--education.vertical-timeline-element > div > span,
+#root > div > div.experience > div > div.vertical-timeline-element--work.vertical-timeline-element > div > span {
+    color: #fff; /* Change text color to white */
+}

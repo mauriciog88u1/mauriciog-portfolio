@@ -75,3 +75,42 @@
     padding: 0;
   }
 }
+/* Add this to center-align the text within the entire .skills section */
+.skills .card {
+  background-color: #020203;
+  color: inherit;
+  text-align: center; /* Center-align text for all cards */
+}
+/*make headers gold and text white*/
+.skills .card h2 {
+  color: #C5B783;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+/* Adjust the .list class to use flexbox and center the items */
+.skills .list {
+  list-style: none;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align items horizontally */
+  justify-content: center; /* Center-align items vertically */
+  width: 100%; /* Use the full width */
+  padding: 0; /* Remove padding */
+}
+
+/* Center-align the individual items */
+.list .item {
+  width: 100%; /* Full width to center-align within the parent */
+}
+
+/* Update media queries as necessary */
+@media only screen and (max-width: 600px) {
+  .about h2, .skills h1, .skills h2 {
+    font-size: 30px;
+  }
+
+  .about .prompt, .skills .list {
+    width: 100%; /* Full width for smaller screens */
+  }
+}

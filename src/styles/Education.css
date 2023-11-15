@@ -1,7 +1,7 @@
 .container {
     color: #ffffff; /* White text */
     margin: 1rem;
-    padding-top: 4rem; /* Adjust space below the nav bar */
+    padding-top: 6rem; /* Adjust space below the nav bar */
     font-family: "Arial", sans-serif; /* Arial font */
     background-color: #000000; /* Black background */
 }

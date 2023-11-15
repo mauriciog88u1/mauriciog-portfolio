@@ -1,53 +1,32 @@
-.project {
-  width: 100%;
-  height: calc(100vh - 100px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 30px; /* Add padding for better spacing */
-  box-sizing: border-box; /* Include padding in the width and height calculations */
+/* Add this to your ProjectDisplay.css */
+.card {
+    background-color: #1E4D2B; /* Olive green background */
+    color: #ffffff; /* White text for better readability */
 }
 
-.project h1 {
-  margin-top: 50px;
-  color: #3e497a;
-  font-size: 35px;
+.card-footer {
+    background-color: #1E4D2B; /* Olive green background */
+    color: #ffffff !important; /* White text */
 }
 
-.project img {
-  max-width: 60%; /* Ensure the image is responsive and does not exceed its container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px;
+.card .btn-outline-primary {
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
-.project p {
-  font-size: 20px; /* Adjust font size to fit within the page */
-  color: #3e497a;
-  margin: 20px 0; /* Add margin for spacing */
+.card .btn-outline-primary:hover {
+    background-color: #ffffff;
+    color: #1E4D2B;
 }
 
-.project svg {
-  font-size: 60px;
-  color: #3e497a;
+.card .btn-outline-secondary {
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
-/* New class for the skills container */
-.skills-container {
-  max-width: 100%; /* Max width to fit the page */
-  overflow-x: auto; /* Allow horizontal scrolling if content is too wide */
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Wrap items to the next line if needed */
-  gap: 10px; /* Space between skill items */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+.card .btn-outline-secondary:hover {
+    background-color: #ffffff;
+    color: #1E4D2B;
 }
 
-/* Style individual skill items */
-.skill-item {
-  padding: 5px 10px; /* Padding inside each skill item */
-  background-color: #f0f0f0; /* Light background for each item */
-  border-radius: 5px; /* Rounded corners for each item */
-  margin: 5px; /* Margin around each item */
-  font-size: 1em; /* Font size relative to the container */
-}
+/* If you have other styles, they should follow here */

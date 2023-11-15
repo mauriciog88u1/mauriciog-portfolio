@@ -8,6 +8,7 @@
   left: 0;
   transition: transform 0.3s ease-in-out;
 }
+.toggleButton{ color: #00ee7d;}
 
 .links {
   width: 100%;
@@ -52,4 +53,25 @@
   .navbar a {
     font-size: 12px;
   }
+}
+.btn {
+  background-color: #1a1a1d; /* Teal background to stand out on the black page */
+  color: #fff; /* White text */
+  border: none; /* Remove default border */
+  padding: 8px 20px; /* Thinner padding for a slimmer look */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+  background-color: #16a085; /* Darker shade of teal for hover effect */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+  cursor: pointer;
+}
+
+.toggleButton {
+  display: flex; /* Aligns the button correctly within the navbar */
+  align-items: center; /* Centers button vertically */
 }

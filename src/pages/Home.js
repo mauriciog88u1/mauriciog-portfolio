@@ -2,11 +2,20 @@ import React from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import GithubIcon from "@material-ui/icons/GitHub";
-import useTypingEffect from "../hooks/useHome"; // Importing the custom hook
 import "../styles/Home.css";
+import { useTypingEffect, useScrollFadeIn } from "../hooks/useHome";
+import { FaPython, FaJava, FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from "react-icons/fa";
+import { SiCplusplus, SiCsharp, SiPhp } from "react-icons/si";
 
 function Home() {
     const titleText = useTypingEffect("Hi, My Name is Mauricio", 100);
+    const programmingLanguagesFadeIn = useScrollFadeIn();
+    const operatingSystemsFadeIn = useScrollFadeIn();
+    const developmentSkillsFadeIn = useScrollFadeIn();
+    const frameworksToolsFadeIn = useScrollFadeIn();
+    const professionalSkillsFadeIn = useScrollFadeIn();
+    const testingProficiencyFadeIn = useScrollFadeIn();
+    const languageProficiencyFadeIn = useScrollFadeIn();
 
     return (
         <div className="home">
@@ -30,36 +39,56 @@ function Home() {
             </div>
             <div className="skills">
                 <h1>Skills</h1>
-                <ol className="list">
-                    <li className="item">
-                        <h2>Programming Languages</h2>
-                        <span>C, C#, C++, Java, JavaScript, PHP, PowerShell, Python, HTML, CSS</span>
-                    </li>
-                    <li className="item">
-                        <h2>Operating Systems</h2>
-                        <span>Linux (Alma, Kali, Ubuntu), macOS, Windows</span>
-                    </li>
-                    <li className="item">
-                        <h2>Development Skills</h2>
-                        <span>Agile development, data structures, algorithms, databases, Git, Scrum, networking, cybersecurity</span>
-                    </li>
-                    <li className="item">
-                        <h2>Frameworks & Tools</h2>
-                        <span>NPM, Node.js, ReactJS, Webpack</span>
-                    </li>
-                    <li className="item">
-                        <h2>Professional Skills</h2>
-                        <span>Leadership, collaboration through previous work experiences</span>
-                    </li>
-                    <li className="item">
-                        <h2>Testing Proficiency</h2>
-                        <span>Test-Driven Development with tools such as GitHub Actions, Jest, JUnit, and Postman</span>
-                    </li>
-                    <li className="item">
-                        <h2>Language Proficiency</h2>
-                        <span>Fluent in Spanish with the ability to work well across all cultures and identities</span>
-                    </li>
-                </ol>
+                <div className="card  mb-3" {...programmingLanguagesFadeIn}>
+                    <div className="card-header">Programming Languages</div>
+                    <div className="card-body">
+                        <FaPython title="Python" />
+                        <FaJava title="Java" />
+                        <SiCplusplus title="C++" />
+                        <SiCsharp title="C#" />
+                        <FaHtml5 title="HTML" />
+                        <FaCss3Alt title="CSS" />
+                        <FaJsSquare title="JavaScript" />
+                        <FaReact title="React" />
+                        <SiPhp title="PHP" />
+                    </div>
+                </div>
+                <div className="card  mb-3" {...operatingSystemsFadeIn}>
+                    <div className="card-header">Operating Systems</div>
+                    <div className="card-body">
+                        Linux (Alma, Kali, Ubuntu), macOS, Windows
+                    </div>
+                </div>
+                <div className="card  mb-3" {...developmentSkillsFadeIn}>
+                    <div className="card-header">Development Skills</div>
+                    <div className="card-body">
+                        Agile development, data structures, algorithms, databases, Git, Scrum, networking, cybersecurity
+                    </div>
+                </div>
+                <div className="card  mb-3" {...frameworksToolsFadeIn}>
+                    <div className="card-header">Frameworks & Tools</div>
+                    <div className="card-body">
+                        NPM, Node.js, ReactJS, Webpack
+                    </div>
+                </div>
+                <div className="card  mb-3" {...professionalSkillsFadeIn}>
+                    <div className="card-header">Professional Skills</div>
+                    <div className="card-body">
+                        Leadership, collaboration through previous work experiences
+                    </div>
+                </div>
+                <div className="card  mb-3" {...testingProficiencyFadeIn}>
+                    <div className="card-header">Testing Proficiency</div>
+                    <div className="card-body">
+                        Test-Driven Development with tools such as GitHub Actions, Jest, JUnit, and Postman
+                    </div>
+                </div>
+                <div className="card  mb-3" {...languageProficiencyFadeIn}>
+                    <div className="card-header">Language Proficiency</div>
+                    <div className="card-body">
+                        Fluent in Spanish with the ability to work well across all cultures and identities
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect, useRef, useCallback} from 'react';
 
-function useTypingEffect(text, speed) {
+export function useTypingEffect(text, speed) {
     const [displayedText, setDisplayedText] = useState('');
     const [index, setIndex] = useState(0);
 
@@ -18,5 +18,40 @@ function useTypingEffect(text, speed) {
 
     return displayedText;
 }
+export const useScrollFadeIn = () => {
+    const domRef = useRef();
 
-export default useTypingEffect;
+    const handleScroll = useCallback(([entry]) => {
+        const { current } = domRef;
+
+        if (entry.isIntersecting) {
+            current.style.transitionProperty = 'opacity transform';
+            current.style.transitionDuration = '1s';
+            current.style.transitionTimingFunction = 'ease-out';
+            current.style.opacity = 1;
+            current.style.transform = 'translateY(0px)';
+        }
+    }, []);
+
+    useEffect(() => {
+        const { current } = domRef;
+        const observer = new IntersectionObserver(handleScroll, { threshold: 0.7 });
+
+        if (current) {
+            observer.observe(current);
+        }
+
+        return () => {
+            if (current) {
+                observer.unobserve(current);
+            }
+        };
+    }, [handleScroll]);
+
+    return {
+        ref: domRef,
+        style: { opacity: 0, transform: 'translateY(20px)' }
+    };
+};
+
+

@@ -1,40 +1,60 @@
-import React from "react";
+// ProjectDisplay.js
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { ProjectList } from "../helpers/ProjectList";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import Unlock from "./Unlock"; // Import Unlock component
 import "../styles/ProjectDisplay.css";
 
 function ProjectDisplay() {
     const { id } = useParams();
     const project = ProjectList[id];
+    const [showUnlockModal, setShowUnlockModal] = useState(false);
 
-    const renderSkills = (skills) => {
-        return skills.split(', ').reduce((acc, skill, index) => {
-            const line = Math.floor(index / 12);
-            if (!acc[line]) {
-                acc[line] = [];
-            }
-            acc[line].push(skill);
-            return acc;
-        }, []).map((skillLine, index) => (
-            <div key={index} className="skill-line">
-                {skillLine.join(', ')}
-            </div>
-        ));
+    const handleVisitProject = () => {
+        if (project.link) {
+            // If there's a link, go there directly
+            window.open(project.link, "_blank");
+        } else {
+            // No link, show the unlock modal
+            setShowUnlockModal(true);
+        }
     };
 
     return (
-        <div className="project">
-            <h1> {project.name}</h1>
-            <img src={project.image} alt={project.name} />
-            <div className="skills">
-                <b>Skills:</b>
-                <div className="skills-list">
-                    {renderSkills(project.skills)}
-                </div>
-            </div>
-            <GitHubIcon />
-        </div>
+        <>
+            <Container className="mt-5">
+                <Row className="justify-content-md-center">
+                    <Col lg={8}>
+                        <Card className="text-center">
+                            <Card.Img variant="top" src={project.image} alt={project.name} />
+                            <Card.Body>
+                                <Card.Title>{project.name}</Card.Title>
+                                <Card.Text>
+                                    {project.description}
+                                </Card.Text>
+                                <Button variant="outline-primary" onClick={handleVisitProject}>
+                                    Visit Project
+                                </Button>
+                                <Button variant="outline-secondary" href={project.github} target="_blank">
+                                    <GitHubIcon />
+                                </Button>
+                            </Card.Body>
+                            <Card.Footer className="text-muted">
+                                <small>Skills used: {project.skills}</small>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+
+            <Unlock
+                showModal={showUnlockModal}
+                handleClose={() => setShowUnlockModal(false)}
+                projectName={project.name}
+            />
+        </>
     );
 }
 

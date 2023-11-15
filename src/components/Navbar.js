@@ -16,7 +16,9 @@ function Navbar() {
         <div className="navbar" id={expandNavbar ? "open" : "close"}>
             <div className="toggleButton">
                 <button className="btn btn-primary" onClick={() => setExpandNavbar((prev) => !prev)}>
-                    <ReorderIcon />
+                    <ReorderIcon >
+                        <button>Button</button>
+                    </ReorderIcon>
                     {expandNavbar ? 'Close' : 'Menu'} {/* Text changes based on navbar state */}
                 </button>
             </div>
