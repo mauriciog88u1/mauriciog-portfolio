@@ -3,6 +3,9 @@
     background-color: #1E4D2B; /* Olive green background */
     color: #ffffff; /* White text for better readability */
 }
+.card-header{
+    color: #C5B783;
+}
 
 .card-footer {
     background-color: #1E4D2B; /* Olive green background */

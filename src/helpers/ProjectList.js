@@ -10,16 +10,19 @@ export const ProjectList = [
         description: "A personal portfolio website to showcase my projects and skills.",
         link: "mauric10.com",
         tools: "React, Material-UI",
-        skills: "React, Material-UI, HTML, CSS, JavaScript, Git, GitHub, CloudFlare"
+        skills: "React, Material-UI, HTML, CSS, JavaScript, Git, GitHub, CloudFlare",
+        github: "https://github.com/mauriciog88u1/mauriciog-portfolio"
+
     },
     {
         name: "Full Stack Chess Application",
         image: proj2,
         id: 2,
         description: "A full stack chess application that allows users to play chess against each other. Utilized REST API to communicate between the front end and back end. Implemented a database to store user information and game history. Implemented a chess engine to validate moves and determine checkmate.",
-        link: "",
+        link: "/chess",
         tools: "Java Spark, React",
-        skills: "IntelliJ IDEA, Linux, Docker, Git, GitHub, Maven, NPM, Webpack, JUnit, Jest, Postman, Zenhub, and Code Climate. The technology tools used include: Linux, Java, JavaScript, React, Reactstrap, React Leaflet, SQL, MariaDB, Java Spark, Concurrency, SLF4J, uLog, JSON, CSV, SVG, and KML"
+        skills: "IntelliJ IDEA, Linux, Docker, Git, GitHub, Maven, NPM, Webpack, JUnit, Jest, Postman, Zenhub, and Code Climate. The technology tools used include: Linux, Java, JavaScript, React, Reactstrap, React Leaflet, SQL, MariaDB, Java Spark, Concurrency, SLF4J, uLog, JSON, CSV, SVG, and KML",
+        github:""
     },
     {
         name: "Web Based Map Tool",

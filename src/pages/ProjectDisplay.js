@@ -14,13 +14,20 @@ function ProjectDisplay() {
 
     const handleVisitProject = () => {
         if (project.link) {
-            // If there's a link, go there directly
             window.open(project.link, "_blank");
         } else {
             // No link, show the unlock modal
             setShowUnlockModal(true);
         }
     };
+    const handleVisitGithub = () => {
+        if(project.github){
+            window.open(project.github, "_blank");
+            }
+        else {
+            setShowUnlockModal(true);
+        }
+    }
 
     return (
         <>
@@ -37,7 +44,7 @@ function ProjectDisplay() {
                                 <Button variant="outline-primary" onClick={handleVisitProject}>
                                     Visit Project
                                 </Button>
-                                <Button variant="outline-secondary" href={project.github} target="_blank">
+                                <Button variant="outline-secondary"  onClick={handleVisitGithub}>
                                     <GitHubIcon />
                                 </Button>
                             </Card.Body>

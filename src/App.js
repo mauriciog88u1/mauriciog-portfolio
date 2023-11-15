@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProjectDisplay from "./pages/ProjectDisplay";
 import AboutMe from "./pages/AboutMe";
-
+import PlayRandomMoveEngine from "./pages/Chess";
 function App() {
   return (
     <div className="App">
@@ -21,6 +21,7 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path ="/education" element={<EducationPage/>} />
           <Route path="/aboutme" element={<AboutMe />} />
+            <Route path="/chess" element={<PlayRandomMoveEngine />} />
         </Routes>
         <Footer />
       </Router>
