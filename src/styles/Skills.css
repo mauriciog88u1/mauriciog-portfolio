@@ -1,0 +1,74 @@
+/* Skills.css */
+
+/* General Styling for the Skills Section */
+.skills-section {
+    padding: 20px;
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: auto;
+}
+.skill-name {
+    margin-bottom: 5px;
+    text-align: justify;
+    font-size: 19px;
+    text-wrap: avoid;
+}
+
+/* Styling for Each Skill Category */
+.skill-category {
+    margin-bottom: 40px;
+}
+
+/* Header Styling for Skill Categories */
+.skill-category h3 {
+    margin-bottom: 15px;
+    color: #333; /* Adjust color as per your theme */
+    font-weight: bold;
+}
+
+/* Progress Bar Customization */
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skill-category .row > .col-3,
+    .skill-category .row > .col-9 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+/* Skills.css */
+
+.skill-container {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.skill-row {
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+
+/* The :hover pseudo-class applies styles when the user hovers over the progress bar */
+.progress-bar:hover {
+    color: #fff; /* Text becomes visible on hover */
+}
+
+.word-cloud-legend p {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.word-cloud-legend span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+

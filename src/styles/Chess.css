@@ -26,3 +26,9 @@ body {
     max-height: 400px;
     overflow-y: auto;
 }
+/*if on mobile margin left more*/
+@media only screen and (max-width: 600px) {
+    .chess-container {
+        margin-left: 50px;
+    }
+}
