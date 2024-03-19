@@ -14,6 +14,24 @@ function Experience() {
         <div className="experience">
             <VerticalTimeline>
                 {/* Work Experience 2 (Most Current) */}
+         <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="Jan 2024 - Current"
+                    iconClassName="work-icon"
+                    icon={<WorkIcon />}
+                >
+                    <h3 className="vertical-timeline-element-title">
+                        Software Engineer Intern, AstraWeave 
+                    </h3>
+                    <h4 className="vertical-timeline-element-subtitle">
+                        Boulder, Colorado
+                    </h4>
+                    <p>
+                    Worked on various software projects in an agile/scrum enviorment.
+                     Collaborated in a dynamic team, contributing to architecture and design solutions under tight deadlines.
+                     Enhanced technical skills across multiple operating systems and cloud platforms, delivering key project components.
+                    </p>
+                </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="Jan 2023 - Current"
